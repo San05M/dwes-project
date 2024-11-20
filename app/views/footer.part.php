@@ -17,7 +17,7 @@
                 <ul class="list-unstyled footer-link">
                     <li><a href="#">instagram</a></li>
                     <li><a href="#">facebook</a></li>
-                    <li><a href="#" >twitter</a></li>
+                    <li><a href="#">twitter</a></li>
                 </ul>
             </div>
             <div class="col-lg-auto ml-lg-auto mt-4">
@@ -25,8 +25,6 @@
                     <li><a href="#">instagram</a></li>
                     <li><a href="#">facebook</a></li>
                     <li><a href="#">twitter</a></li>
-                    <!-- Please note.You are not allowed to remove credit link.Please respect that.-->
-                    <li><a href="https://sharebootstrap.com">dev by sharebootstrap</a></li>
                 </ul>
             </div>
         </div>
@@ -35,10 +33,6 @@
     <!--/.container-->
 </footer>
 <!-- build:js -->
-<script src="{{root}}assets/vendor/js/jquery.js"></script>
-<script src="{{root}}assets/vendor/js/popper.js"></script>
-<script src="{{root}}assets/vendor/js/bootstrap.js"></script>
-<script src="{{root}}assets/vendor/js/isotope.pkgd.min.js"></script>
-<script src="{{root}}assets/vendor/js/jquery.easing.min.js"></script>
-<script src="{{root}}assets/js/custom.js"></script>
+<script src="/public/assets/js/main.min.js"></script>
+
 <!-- endbuild -->
