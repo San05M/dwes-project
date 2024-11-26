@@ -47,7 +47,7 @@
                     <!-- end:entry -->
                     <div class="entry work-entry digital">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1558180702-95f1c3ae2ca3.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1558180702-95f1c3ae2ca3.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Aramark</div>
@@ -59,7 +59,7 @@
                     <!-- end:entry -->
                      <div class="entry work-entry campaigns">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1558118720-fa5cdebe6b3a.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1558118720-fa5cdebe6b3a.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Portfolio page</div>
@@ -71,7 +71,7 @@
                     <!-- end:entry -->
                     <div class="entry work-entry branding">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1558100984-01e6cd6fc9aa.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1558100984-01e6cd6fc9aa.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Sunday Breakfast</div>
@@ -83,7 +83,7 @@
                     <!-- end:entry -->
                     <div class="entry work-entry campaigns h2">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1494475673543-6a6a27143fc8.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1494475673543-6a6a27143fc8.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Sunday Breakfast</div>
@@ -95,7 +95,7 @@
                     <!-- end:entry -->
                     <div class="entry work-entry branding digital">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1557941760-987c3f403d5a.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1557941760-987c3f403d5a.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Pine Street</div>
@@ -107,7 +107,7 @@
                     <!-- end:entry -->
                     <div class="entry work-entry digital">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="/public/assets/img/photo-1534073828943-f801091bb18c.jpg"></div>
+                            <div class="entry-image imageBG" data-img="/public/assets/img/index/photo-1534073828943-f801091bb18c.jpg"></div>
                             <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Mobipaid</div>
@@ -119,7 +119,7 @@
                     <!-- end:entry -->
                      <div class="entry work-entry brading">
                         <a href="/app/views/project.html">
-                            <div class="entry-image imageBG" data-img="./public/assets/img/photo-1484755560615-a4c64e778a6c.jpg"></div>
+                            <div class="entry-image imageBG" data-img="./public/assets/img/index/photo-1484755560615-a4c64e778a6c.jpg"></div>
                              <div class="work-entry-hover">
                                 <div class="work-entry-content">
                                     <div class="work-entry-title">Solo Solution</div>

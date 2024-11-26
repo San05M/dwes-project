@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6">
-                        <figure><img src="/public/assets/img/photo-1558118720-fa5cdebe6b3a.jpg" alt="" class="img-fluid">
+                        <figure><img src="/public/assets/img/index/photo-1558118720-fa5cdebe6b3a.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
                     <!-- end:col -->

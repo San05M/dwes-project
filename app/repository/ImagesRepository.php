@@ -1,0 +1,1 @@
+// TODO: images repository similar al images de la práctica, hereda de QueryBuilder y sirve para hacer la conexión a la base de datos. 

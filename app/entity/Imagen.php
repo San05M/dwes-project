@@ -1,9 +1,14 @@
-<?php 
-class Imagen{
+<?php
+class Imagen
+{
     private $id;
     private $nombre;
     private $descripcion;
     private $categoria;
+
+    const RUTA_IMAGENES_PORTFOLIO = '/public/img/index';
+    const RUTA_IMAGENES_SOCIOS = '/public/img/socios';
+    const RUTA_IMAGENES_CONTACTO = '/public/img/contacto/';
 
     function setNombre($nombre): Imagen
     {
@@ -47,6 +52,21 @@ class Imagen{
     function getId(): ?int
     {
         return $this->id;
+    }
+
+    function getUrlIndex(): ?string
+    {
+        return self::RUTA_IMAGENES_PORTFOLIO . $this->getNombre();
+    }
+
+    function getUrlSocios(): ?string
+    {
+        return self::RUTA_IMAGENES_SOCIOS . $this->getNombre();
+    }
+
+    function getUrlContacto(): ?string
+    {
+        return self::RUTA_IMAGENES_CONTACTO . $this->getNombre();
     }
 
     public function __toString(): string
