@@ -10,31 +10,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/index.view.php') == true || esOpcionMenuActiva('/') == true)
-                            echo '<li class="active lien">';
+                        <?php if (esOpcionMenuActiva('/index') == true || esOpcionMenuActiva('/') == true)  echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="index.view.php">Principal</a>
+                        <a class="nav-link" href="/index">Principal</a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('project.view.php') == true || esOpcionMenuActiva('/') == true)
-                            echo '<li class="active lien">';
+                        <?php if (esOpcionMenuActiva('/project') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="project.view.php">Projecto</a>
+                        <a class="nav-link" href="/project">Projecto</a>
                     </li>
 
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('about.view.php') == true || esOpcionMenuActiva('/') == true)
-                            echo '<li class="active lien">';
+                        <?php if (esOpcionMenuActiva('/about') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="about.view.php">Sobre nosotros</a>
+                        <a class="nav-link" href="/about">Sobre nosotros</a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/contact.view.php') == true || esOpcionMenuActiva('/') == true)
-                            echo '<li class="active lien">';
+                        <?php if (esOpcionMenuActiva('/contact') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
                         <a class="nav-link" href="contact.view.php">Contáctanos</a>
                     </li>
