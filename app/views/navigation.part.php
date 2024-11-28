@@ -18,13 +18,17 @@
                     <li class="nav-item">
                         <?php if (esOpcionMenuActiva('/project') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="/project">Projecto</a>
+                        <a class="nav-link" href="project.view.php">Projecto</a>
                     </li>
-
+                    <li class="nav-item">
+                        <?php if (esOpcionMenuActiva('/galeria') == true) echo '<li class="active lien">';
+                        else echo '<li class=”0lien”>'; ?>
+                        <a class="nav-link" href="galeria.view.php">Galeria</a>
+                    </li>
                     <li class="nav-item">
                         <?php if (esOpcionMenuActiva('/about') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="/about">Sobre nosotros</a>
+                        <a class="nav-link" href="abou.view.phpt">Sobre nosotros</a>
                     </li>
                 </ul>
 

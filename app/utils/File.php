@@ -34,7 +34,7 @@ class File
     public function __construct(string $fileName, array $arrTypes)
     {
         $this->file = $_FILES[$fileName]; // $_FILES guarda los datos del archivo subido
-        $this->fileName = '';
+        $this->fileName = "";
 
         if (!isset($this->file)) {
             throw new FileException('Debes seleccionar un fichero');
