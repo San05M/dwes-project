@@ -66,9 +66,9 @@
                 <div class="form-group">
                     <div class="col-xs-12">
                         <label class="label-control">Titulo</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $titulo ?> ">
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $titulo ?? ""?> ">
                         <label class="label-control">Descripción</label>
-                        <textarea class="form-control" name="descripcion"><?= $descripcion ?></textarea>
+                        <textarea class="form-control" name="descripcion"><?= $descripcion  ?? ""?></textarea>
                         <button class="pull-right btn btn-lg sr-button">ENVIAR</button>
                     </div>
                 </div>

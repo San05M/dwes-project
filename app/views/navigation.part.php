@@ -25,11 +25,6 @@
                         else echo '<li class=”0lien”>'; ?>
                         <a class="nav-link" href="galeria.view.php">Galeria</a>
                     </li>
-                    <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/about') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="abou.view.phpt">Sobre nosotros</a>
-                    </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
@@ -37,6 +32,16 @@
                         <?php if (esOpcionMenuActiva('/contact') == true) echo '<li class="active lien">';
                         else echo '<li class=”0lien”>'; ?>
                         <a class="nav-link" href="contact.view.php">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <?php if (esOpcionMenuActiva('/login') == true) echo '<li class="active lien">';
+                        else echo '<li class=”0lien”>'; ?>
+                        <a class="nav-link" href="login.view.php">Ya soy miembro</a>
+                    </li>
+                    <li class="nav-item">
+                        <?php if (esOpcionMenuActiva('/registro') == true) echo '<li class="active lien">';
+                        else echo '<li class=”0lien”>'; ?>
+                        <a class="nav-link" href="registro.view.php">¡Únete a nosotros!</a>
                     </li>
                 </ul>
             </div>
