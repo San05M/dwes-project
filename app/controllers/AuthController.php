@@ -2,13 +2,19 @@
 
 namespace dwes\app\controllers;
 
+use dwes\app\entity\Imagen;
 use dwes\app\entity\Usuario;
-use dwes\app\exceptions\ValidationException;
-use dwes\app\repository\UsuariosRepository;
-use dwes\core\App;
+
+use dwes\app\core\database\QueryBuilder;
+use dwes\app\repository\UsuarioRepository;
+use dwes\app\repository\ImagenesRepository;;
+
 use dwes\core\helpers\FlashMessage;
+use dwes\core\App;
 use dwes\core\Response;
 use dwes\core\Security;
+
+use dwes\app\exceptions\ValidationException;
 
 class AuthController
 {
@@ -32,13 +38,13 @@ class AuthController
     {
         try {
             if (!isset($_POST['username']) || empty($_POST['username']))
-                throw new ValidationException('Debes introducir el usuario y el password');
+                throw new ValidationException('Introduce el usuario y el password');
             FlashMessage::set('username', $_POST['username']);
 
             if (!isset($_POST['password']) || empty($_POST['password']))
-                throw new ValidationException('Debes introducir el usuario y el password');
+                throw new ValidationException('Introduce el usuario y el password');
 
-            $usuario = App::getRepository(UsuariosRepository::class)->findOneBy([
+            $usuario = App::getRepository(UsuarioRepository::class)->findOneBy([
                 'username' => $_POST['username']
             ]);
             if (!is_null($usuario) && Security::checkPassword($_POST['password'], $usuario->getPassword())) {
@@ -69,7 +75,7 @@ class AuthController
 
             if (isset($_POST['captcha']) && ($_POST['captcha'] != "")) {
                 if ($_SESSION['captchaGenerado'] != $_POST['captcha']) {
-                    throw new ValidationException("¡Ha introducido un código de seguridad incorrecto! Inténtelo de nuevo.");
+                    throw new ValidationException("¡Ha introducido un código de seguridad incorrecto. Inténtelo de nuevo.");
                 }
             } else {
                 throw new ValidationException("Introduzca el código de seguridad.");
@@ -90,7 +96,7 @@ class AuthController
             $usuario->setRole('ROLE_USER');
             $usuario->setPassword($password);
 
-            App::getRepository(UsuariosRepository::class)->save($usuario);
+            App::getRepository(UsuarioRepository::class)->save($usuario);
             FlashMessage::unset('username');
 
             $mensaje = "Se ha creado el usuario: " . $usuario->getUsername();

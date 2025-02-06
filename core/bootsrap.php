@@ -2,11 +2,9 @@
 
 namespace dwes\core;
 
-use dwes\core\Request;
 use dwes\core\Router;
 use dwes\core\App;
 use dwes\app\utils\MyLog;
-use dwes\app\exceptions\NotFoundException;
 
 require __DIR__ . '/../vendor/autoload.php';
 
