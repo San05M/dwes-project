@@ -2,18 +2,12 @@
 
 namespace dwes\app\controllers;
 
-use dwes\app\entity\Imagen;
 use dwes\app\entity\Usuario;
-
-use dwes\app\core\database\QueryBuilder;
 use dwes\app\repository\UsuarioRepository;
-use dwes\app\repository\ImagenesRepository;;
-
 use dwes\core\helpers\FlashMessage;
 use dwes\core\App;
 use dwes\core\Response;
 use dwes\core\Security;
-
 use dwes\app\exceptions\ValidationException;
 
 class AuthController
@@ -38,14 +32,13 @@ class AuthController
     {
         try {
             if (!isset($_POST['username']) || empty($_POST['username']))
-                throw new ValidationException('Introduce el usuario y el password');
+                throw new ValidationException('Debes introducir el usuario y el password');
             FlashMessage::set('username', $_POST['username']);
-
             if (!isset($_POST['password']) || empty($_POST['password']))
-                throw new ValidationException('Introduce el usuario y el password');
-
+                throw new ValidationException('Debes introducir el usuario y el password');
             $usuario = App::getRepository(UsuarioRepository::class)->findOneBy([
                 'username' => $_POST['username']
+
             ]);
             if (!is_null($usuario) && Security::checkPassword($_POST['password'], $usuario->getPassword())) {
                 $_SESSION['loguedUser'] = $usuario->getId();
@@ -55,7 +48,7 @@ class AuthController
             throw new ValidationException('El usuario y el password introducidos no existen');
         } catch (ValidationException $validationException) {
             FlashMessage::set('login-error', [$validationException->getMessage()]);
-            App::get('router')->redirect('login');
+            App::get('router')->redirect('login'); // Redireccionamos al login
         }
     }
 

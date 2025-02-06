@@ -5,59 +5,48 @@ namespace dwes\app\entity;
 class Imagen implements IEntity
 {
     private $id = null;
-    private $nombre = "";
+    private $titulo = "";
     private $descripcion = "";
-    private $categoria = 1;
-    private $numVisualizaciones = 0;
-    private $numLikes = 0;
-    private $numDownloads = 0;
+    private $ruta="";
+    private $categoria = "";
 
     const RUTA_IMAGENES_PORTFOLIO = '/public/images/index/portfolio/';
     const RUTA_IMAGENES_GALERIA = '/public/images/index/gallery/';
     const RUTA_IMAGENES_CLIENTES = '/public/images/clients/';
     const RUTA_IMAGENES_SUBIDAS = '/public/assets/img/galeria/';
 
-    public function __construct($nombre = "", $descripcion = "", $categoria = 1, $numVisualizaciones = 0, $numLikes = 0, $numDownloads = 0)
+    public function __construct($titulo = "", $descripcion = "", $categoria = 1, $ruta = "")
     {
-        $this->nombre = $nombre;
+        $this->titulo = $titulo;
         $this->descripcion = $descripcion;
         $this->categoria = $categoria;
-        $this->numVisualizaciones = $numVisualizaciones;
-        $this->numLikes = $numLikes;
-        $this->numDownloads = $numDownloads;
+        $this->ruta = $ruta;
     }
 
     public function toArray(): array
     {
         return [
             'id' => $this->getId(),
-            'nombre' => $this->getNombre(),
+            'titulo' => $this->getTitulo(),
             'descripcion' => $this->getDescripcion(),
-            'numVisualizaciones' => $this->getNumVisualizaciones(),
-            'numLikes' => $this->getNumLikes(),
-            'numDownloads' => $this->getNumDownloads(),
-            'categoria' => $this->getCategoria()
+            'categoria' => $this->getCategoria(),
+            'ruta' => $this->getRuta()
         ];
     }
 
     public function getId() { return $this->id; }
-    public function getNombre() { return $this->nombre; }
+    public function geTtitulo() { return $this->titulo; }
     public function getDescripcion() { return $this->descripcion; }
     public function getCategoria() { return $this->categoria; }
-    public function getNumVisualizaciones() { return $this->numVisualizaciones; }
-    public function getNumLikes() { return $this->numLikes; }
-    public function getNumDownloads() { return $this->numDownloads; }
-    public function setNombre($nombre): Imagen { $this->nombre = $nombre; return $this; }
+    public function setTitulo($titulo): Imagen { $this->titulo = $titulo; return $this; }
     public function setDescripcion($descripcion): Imagen { $this->descripcion = $descripcion; return $this; }
     public function setCategoria($categoria): Imagen { $this->categoria = $categoria; return $this; }
-    public function setNumVisualizaciones($numVisualizaciones): Imagen { $this->numVisualizaciones = $numVisualizaciones; return $this; }
-    public function setNumLikes($numLikes): Imagen { $this->numLikes = $numLikes; return $this; }
-    public function setNumDownloads($numDownloads): Imagen { $this->numDownloads = $numDownloads; return $this; }
-
-    public function getUrlPortfolio() { return self::RUTA_IMAGENES_PORTFOLIO . $this->getNombre(); }
-    public function getUrlGaleria() { return self::RUTA_IMAGENES_GALERIA . $this->getNombre(); }
-    public function getUrlClientes() { return self::RUTA_IMAGENES_CLIENTES . $this->getNombre(); }
-    public function getUrlSubidas() { return self::RUTA_IMAGENES_SUBIDAS . $this->getNombre(); }
+    public function setRuta($ruta): Imagen { $this->ruta = $ruta; return $this; }
+    public function getRuta() { return $this->ruta; }   
+    public function getUrlPortfolio() { return self::RUTA_IMAGENES_PORTFOLIO . $this->getTitulo(); }
+    public function getUrlGaleria() { return self::RUTA_IMAGENES_GALERIA . $this->getTitulo(); }
+    public function getUrlClientes() { return self::RUTA_IMAGENES_CLIENTES . $this->getTitulo(); }
+    public function getUrlSubidas() { return self::RUTA_IMAGENES_SUBIDAS . $this->getTitulo(); }
 
     public function __toString()
     {

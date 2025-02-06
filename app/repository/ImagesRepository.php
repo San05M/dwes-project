@@ -28,3 +28,5 @@ class ImagenesRepository extends QueryBuilder
         $this->executeTransaction($fnGuardaImagen);
     }
 }
+
+// TODO: Revisar la clase de ImagenesRepository. 

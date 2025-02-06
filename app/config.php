@@ -2,7 +2,7 @@
 return [
     'database' => [
         'name' => 'cursophp',
-        'username' => 'userCurso',
+        'username' => 'usercurso',
         'password' => 'php',
         'connection' => 'mysql:host=localhost',
         'options' => [
@@ -11,18 +11,9 @@ return [
             PDO::ATTR_PERSISTENT => true
         ]
     ],
-    'mailer' => [
-        'smtp_server' => 'smtp.gmail.com',
-        'smtp_port' => '587',
-        'smtp_security' => 'tls',
-        'username' => 'prueba@gmail.com', // CORREO
-        'password' => 'contraseña', // CONTRASEÑA
-        'email' => 'prueba@gmail.com', // CORREO
-        'nombre' => 'info'
-    ],
     [
         'logs' => [
-            'filename' => 'curso.log',
+            'filename' => 'proyecto.log',
             'level' => \Monolog\Logger::WARNING
         ],
 

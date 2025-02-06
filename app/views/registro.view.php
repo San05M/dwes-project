@@ -31,8 +31,6 @@
                     <div class="col-xs-12">
                         <label class="label-control">Repite la contraseña</label>
                         <input class="form-control" name="re-password" type="password">
-                        <label class="label-control">Verificando que eres humano <img style="border: 1px solid #D3D0D0" src="/app/utils/captcha.php" id='captcha'></label>
-                        <input class="form-control" name="captcha" type="text">
                         <button class="pull-right btn btn-lg sr-button">ENVIAR</button>
                     </div>
                 </div>

@@ -1,47 +1,37 @@
-<?php require_once __DIR__ . '/../utils/utils.class.php'; ?>
+<?php
+
+use dwes\app\utils\Utils; ?>
+
 <!--Navigation Part -->
 <div class="nav-main">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand font-weight-bold" href="index.php">art.studio</a>
+            <a class="navbar-brand font-weight-bold" href="index.php">Projecto Sandra</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/index') == true || esOpcionMenuActiva('/') == true)  echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="/index">Principal</a>
-                    </li>
+                    <a href="/" <?php if (Utils::esOpcionMenuActiva('/index') || Utils::esOpcionMenuActiva('/')) echo 'active'; ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/project') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="project.view.php">Projecto</a>
+                    <a href="/" <?php if (Utils::esOpcionMenuActiva('/galeria') || Utils::esOpcionMenuActiva('/')) echo 'active'; ?>">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/galeria') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="galeria.view.php">Galeria</a>
+                    <a href="/"  <?php if (Utils::esOpcionMenuActiva('/perfil') || Utils::esOpcionMenuActiva('/')) echo 'active'; ?>">Perfil</a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/contact') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="contact.view.php">Contáctanos</a>
+                    <a href="/"  <?php if (Utils::esOpcionMenuActiva('/login') || Utils::esOpcionMenuActiva('/')) echo 'active'; ?>">Login</a>
                     </li>
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/login') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="login.view.php">Ya soy miembro</a>
+                    <a href="/"<?php if (Utils::esOpcionMenuActiva('/registro') || Utils::esOpcionMenuActiva('/')) echo 'active'; ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <?php if (esOpcionMenuActiva('/registro') == true) echo '<li class="active lien">';
-                        else echo '<li class=”0lien”>'; ?>
-                        <a class="nav-link" href="registro.view.php">¡Únete a nosotros!</a>
+                    <a>Logout</a>
                     </li>
                 </ul>
             </div>

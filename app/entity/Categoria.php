@@ -5,32 +5,27 @@ use dwes\app\entity\IEntity;
 class Categoria implements IEntity
 {
     private $id = null;
-    private $nombre = "";
-    private $numImagenes = 0;
+    private $nombreCat = "";
 
-    public function __construct($nombre = "", $numImagenes = 0)
+    public function __construct($nombreCat = "")
     {
-        $this->nombre = $nombre;
-        $this->numImagenes = $numImagenes;
+        $this->nombreCat = $nombreCat;
     }
 
     public function getId() { return $this->id; }
-    public function getNombre(){ return $this->nombre; }
-    public function getNumImagenes() { return $this->numImagenes; }
-    public function setNombre($nombre): Categoria { $this->nombre = $nombre; return $this; }
-    public function setNumImagenes($numImagenes): Categoria { $this->numImagenes = $numImagenes; return $this; }
+    public function getNombreCat(){ return $this->nombreCat; }
+    public function setNombreCat($nombreCat): Categoria { $this->nombreCat = $nombreCat; return $this; }
 
     public function toArray(): array
     {
         return [
             'id' => $this->getId(),
-            'nombre' => $this->getNombre(),
-            'numImagenes' => $this->getNumImagenes()
+            'nombreCat' => $this->getNombreCat()
         ];
     }
 
     public function __toString(): string
     {
-        return $this->getNombre();
+        return $this->getNombreCat();
     }
 }

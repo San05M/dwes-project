@@ -66,7 +66,7 @@ class GaleriaController
             $imagenGaleria = new Imagen($imagen->getFileName(), $descripcion, $categoria);
             $imagenesRepository->save($imagenGaleria);
 
-            $mensaje = "Se ha guardado una imagen: " . $imagenGaleria->getNombre();
+            $mensaje = "Se ha guardado una imagen: " . $imagenGaleria->getTitulo();
 
             App::get('logger')->add($mensaje);
             FlashMessage::set('mensaje', $mensaje);

@@ -10,14 +10,15 @@ class Usuario implements IEntity
     private $username;
     private $password;
     private $role;
-    public ?string $imagen;
+    private $avatar;
 
-    public function __construct($username = "", $password = "", $role = "")
+    public function __construct($username = "", $password = "", $role = "", $avatar="")
     {
         $this->id = null;
         $this->username = $username;
         $this->password = $password;
         $this->role = $role;
+        $this->avatar = $avatar;
     }
 
     public function getId(): ?int
@@ -58,6 +59,16 @@ class Usuario implements IEntity
         return $this;
     }
 
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+        return $this;
+    }
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
     public function toArray(): array
     {
         return [
@@ -65,6 +76,7 @@ class Usuario implements IEntity
             'username' => $this->username,
             'password' => $this->password,
             'role' => $this->role,
+            'avatar' => $this->avatar
         ];
     }
 }
